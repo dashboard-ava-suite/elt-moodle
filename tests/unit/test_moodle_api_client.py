@@ -5,7 +5,7 @@ Tests cover: Client initialization, URL validation, HTTPS enforcement
 
 import sys
 from pathlib import Path
-from unittest.mock import MagicMock, Mock, patch  # noqa
+from unittest.mock import Mock, patch
 
 import pytest
 

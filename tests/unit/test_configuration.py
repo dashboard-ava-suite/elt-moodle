@@ -3,9 +3,10 @@ Unit tests for Configuration Management based on TEST_SCENARIOS.md
 Tests cover: Comma-separated config parsing, instance retrieval, DAG config loading
 """
 
+import importlib.util
 import sys
 from pathlib import Path
-from unittest.mock import Mock, patch  # noqa
+from unittest.mock import patch
 
 import pytest
 
@@ -15,12 +16,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent / "dags"))
 from utils.moodle_api import get_moodle_instance_config, parse_moodle_config  # noqa
 
 # Check if airflow is available
-try:
-    import airflow  # noqa
-
-    AIRFLOW_AVAILABLE = True
-except ImportError:
-    AIRFLOW_AVAILABLE = False
+AIRFLOW_AVAILABLE = importlib.util.find_spec("airflow") is not None
 
 
 class TestCommaSeparatedConfigParsing:

@@ -3,8 +3,6 @@ Test fixtures for Moodle ELT Integration tests.
 Provides reusable test data and mock objects.
 """
 
-from datetime import datetime  # noqa
-
 import pytest
 
 
