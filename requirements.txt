@@ -1,5 +1,5 @@
-# Apache Airflow (Updated to 3.1.7 to fix proxy credentials leak vulnerability)
-apache-airflow==3.2.1rc1
+# Apache Airflow (3.3.2 corrige as vulnerabilidades conhecidas até 3.3.1)
+apache-airflow==3.3.2
 apache-airflow-providers-postgres>=5.0.0
 
 # Database drivers
@@ -7,7 +7,7 @@ psycopg2-binary==2.9.9
 
 # HTTP and API clients
 requests==2.33.0
-urllib3==2.7.0  # Updated to 2.6.3 to fix decompression vulnerabilities
+urllib3==2.8.0  # corrige vulnerabilidades de descompressão e redirecionamento
 
 # Utilities
 python-dateutil==2.8.2
