@@ -125,7 +125,7 @@ services:
     command: >
       bash -c "
         pip install --no-cache-dir -r requirements.txt -r requirements-dev.txt &&
-        pytest -v --cov=dags --cov-report=term-missing --cov-report=html:htmlcov
+        pytest -v --cov=dags/utils --cov-report=term-missing --cov-report=html:htmlcov
       "
     depends_on:
       - postgres

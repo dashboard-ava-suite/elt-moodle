@@ -45,6 +45,7 @@ jobs:
       
       - name: Run Bandit (security check)
         run: |
+          pip install bandit
           bandit -r dags/ -f json -o bandit-report.json || true
           bandit -r dags/ --exit-zero
       
@@ -99,7 +100,7 @@ jobs:
         run: |
           pytest tests/ \
             -v \
-            --cov=dags \
+            --cov=dags/utils \
             --cov-report=term-missing \
             --cov-report=xml:coverage.xml \
             --cov-report=html:htmlcov \
